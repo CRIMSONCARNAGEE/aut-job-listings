@@ -1,0 +1,200 @@
+:root {
+  --text-color: #5CA5A5;
+  --text-element-color: #5CA5A5;
+  --black-element-color: #2B3939;
+  --light-green: rgba(92, 165, 165, 0.1 );
+  --small-text-color: #7C8F8F;
+}
+
+
+/* GLOBAL */
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  height: 100%;
+}
+*,
+*::before
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1.5;
+  font-family: "League Spartan", "Arial", "sans-serif";
+  background-color: #EFFAFA;
+  color: #222;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* CONTAINER */
+.container {
+  max-width: 1110px;
+  padding-left: 30px;
+  padding-right: 30px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Badges */
+.badge {
+  display: inline-block;
+  padding: 6px 8px 4px;
+  text-align: center;
+  font-size: 11px;
+  line-height: 14px;
+  letter-spacing: -0.08px;
+  text-transform: uppercase;
+  border-radius: 12px;
+}
+.badge-green {
+  background-color: var(--text-color);
+  color: #fff;
+}
+.badge-black {
+  background-color: var(--black-element-color);
+  color: #fff;
+}
+
+/* tag */
+.tag {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: var(--light-green);
+  color: var(--text-color);
+  padding: 4px 8px;
+  font-size: 13px;
+  line-height: 24px;
+  letter-spacing: -0.1px;
+}
+
+/* MAIN CONTENT */
+.main-container {
+  flex-grow: 1;
+  padding-bottom: 120px;
+}
+
+/* site header */
+.site-header {
+  min-height: 156px;
+  background-color: var(--text-color);
+  background-image: url(../img/Combined-Shape.svg);
+  background-size: auto 100%;
+  background-position: center center;
+  margin-bottom: 30px;
+}
+
+
+/* main content */
+.job-listings-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.job-listing-item {
+  display: flex;
+  align-items: center;
+  box-shadow: 0px 15px 20px -5px rgba(13, 113, 130, 0.15);
+  background-color: #fff;
+  border-radius: 5px;
+  border-left: 5px solid transparent;
+  padding: 32px 40px 32px 35px;
+}
+.job-listing-item:not(:last-child) {
+  margin-bottom: 24px;
+}
+.job-listing-item-featured {
+  border-left: 5px solid var(--text-element-color);
+}
+.job-listing-logo {
+  width: 88px;
+  height: 88px;
+  flex-shrink: 0;
+  margin-right: 24px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.job-listing-info {
+  margin-right: 24px;
+  flex-grow: 1;
+}
+.job-listing-company-badges {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+.job-listing-company-name {
+  color: var(--text-color);
+  margin-right: 16px;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: bold;
+}
+.job-listing-badges {
+  display: flex;
+}
+.job-listing-badges-item:not(:last-child) {
+  margin-right: 8px;
+}
+
+.job-listing-posotion {
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+.job-listings-link {
+  color: var(--black-element-color);
+  font-size: 18px;
+  text-decoration: none;
+  line-height: 24px;
+}
+.job-listings-link:hover {
+  color: var(--text-color);
+}
+
+.job-listings-meta {
+  display: flex;
+  align-items: center;
+}
+.job-listings-meta-item {
+  position: relative;
+  font-weight: normal;
+  color: var(--small-text-color);
+  letter-spacing: -0.012px;
+}
+.job-listings-meta-item:not(:last-child) {
+  margin-right: 36px;
+}
+.job-listings-meta-item:not(:last-child)::after {
+  width: 4px;
+  top: 50%;
+  transform: translateY(-100%);
+  border-radius: 50%;
+  background-color: #B8C4C4;
+  right: -20px;
+  height: 4px;
+  position: absolute;
+  content: "";
+}
+
+.job-listings-tags-list {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  flex-grow: 1;
+}
+.job-listings-tag-item:not(:last-child) {
+  margin-right: 16px;
+}
